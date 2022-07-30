@@ -5,7 +5,7 @@ class Home extends React.Component {
     return (
       <div>
         <h1>Web3 Boilerplate</h1>
-        <button id="connect-btn" onClick={this.props.onAuth}>Connect with MetaMask</button>
+        <button onClick={this.props.onLogin}>Connect with MetaMask</button>
       </div>
     );
   }

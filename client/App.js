@@ -12,11 +12,11 @@ function App() {
     setAccount(accounts[0]);
   }
 
-  const authenticate = () => {
+  const login = () => {
     if (MetaMask.isInstalled()) {
       MetaMask.connect(updateAccount);
     } else {
-      window.open('https://metamask.io/download');
+      MetaMask.download();
     }
   }
 
@@ -28,7 +28,7 @@ function App() {
     (account ? 
       <Dashboard account={account} onLogout={logout} /> 
       : 
-      <Home onAuth={authenticate} />
+      <Home onLogin={login} />
     )
   );
 }
