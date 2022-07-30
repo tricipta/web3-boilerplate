@@ -1,15 +1,21 @@
-export const isInstalled = () => {
+const MetaMask = () => {
+
+}
+
+MetaMask.isInstalled = () => {
   return Boolean(window.ethereum && ethereum.isMetaMask);
 }
 
-export const download = () => {
+MetaMask.download = () => {
   window.open('https://metamask.io/download');
 }
 
-export const connect = async(callback) => {
+MetaMask.connect = async(callback) => {
   await ethereum.request({ "method": "eth_requestAccounts" })
   .then(callback)
   .catch((err) => {
     console.log(err.message);
   });
 }
+
+export default MetaMask;

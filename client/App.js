@@ -3,7 +3,7 @@ import React from 'react';
 import Dashboard from './components/Dashboard';
 import Home from './components/Home';
 
-import * as MetaMask from './library/MetaMask';
+import MetaMask from './library/MetaMask';
 
 function App() {
   const [account, setAccount] = React.useState(null);
